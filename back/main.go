@@ -22,10 +22,6 @@ func main() {
 		})
 	})
 
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("welcome"))
-	})
-
 	controllers.Route(r)
 
 	fmt.Println("Server running on port 8080")

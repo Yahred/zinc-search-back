@@ -160,7 +160,7 @@ func IndexMails() {
 	fmt.Println("Reading files completed")
 
 	if err != nil {
-		log.Fatal(err)
+		print("Me detuve")
 	}
 
 	fmt.Println("Indexing completed")

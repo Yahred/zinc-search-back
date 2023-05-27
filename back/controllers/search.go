@@ -14,6 +14,7 @@ type SearchController struct{}
 
 func (sc SearchController) SearchEmails(w http.ResponseWriter, r *http.Request) {
 	query := r.URL.Query().Get("q")
+
 	page, err := strconv.Atoi(r.URL.Query().Get("page"))
 
 	if err != nil {
@@ -42,6 +43,6 @@ func (sc SearchController) SearchEmails(w http.ResponseWriter, r *http.Request) 
 func Route(router chi.Router) {
 	sc := SearchController{}
 
-	router.Get("/search", sc.SearchEmails)
+	router.Get("/api/search", sc.SearchEmails)
 
 }
